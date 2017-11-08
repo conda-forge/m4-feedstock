@@ -6,13 +6,24 @@ package:
 
 source:
   fn: m4-{{ version }}.tar.gz
-  url: http://ftp.gnu.org/gnu/m4/m4-{{ version }}.tar.gz
+  url: http://ftp.gnu.org/gnu/m4/m4-{{ version }}.tar.gz  
   sha256: 3ce725133ee552b8b4baca7837fb772940b25e81b2a9dc92537aeaf733538c9e
+  #url: http://mirrors.kernel.org/sourceware/cygwin/x86_64/release/m4/m4-{{ version }}-2-src.tar.xz  # [win]
+  #sha256: 9a514892442252023d6b1878fa53f1c7df0d6273f5d2e4a88dd45bf0efc5d8b1  # [win]
 
 build:
   number: 1
-  skip: True  # [win]
 
+requirements:
+  build:
+    - toolchain        # [win]
+    - make             # [win]
+    - m2w64-toolchain  # [win]
+    - git  # [win]
+    #- python  # [win]
+  run:
+    - m2w64-gcc-libs   # [win]
+  
 test:
   commands:
     - m4 --help
@@ -29,3 +40,4 @@ about:
 extra:
   recipe-maintainers:
     - ocefpaf
+    - scopatz
