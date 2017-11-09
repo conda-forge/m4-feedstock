@@ -1,6 +1,6 @@
-diff -Naur m4-1.4.18-orig/build-aux/compile m4-1.4.18/build-aux/compile
---- m4-1.4.18-orig/build-aux/compile	2016-12-30 04:32:31.000000000 +0800
-+++ m4-1.4.18/build-aux/compile	2017-01-02 03:35:23.243966200 +0800
+diff -Naur m4-1.4.17-orig/build-aux/compile m4-1.4.17/build-aux/compile
+--- m4-1.4.17-orig/build-aux/compile	2016-12-30 04:32:31.000000000 +0800
++++ m4-1.4.17/build-aux/compile	2017-01-02 03:35:23.243966200 +0800
 @@ -53,7 +53,7 @@
  	  MINGW*)
  	    file_conv=mingw
@@ -19,9 +19,9 @@ diff -Naur m4-1.4.18-orig/build-aux/compile m4-1.4.18/build-aux/compile
  	  file=`cygpath -m "$file" || echo "$file"`
  	  ;;
  	wine/*)
-diff -Naur m4-1.4.18-orig/build-aux/config.guess m4-1.4.18/build-aux/config.guess
---- m4-1.4.18-orig/build-aux/config.guess	2016-12-30 04:32:31.000000000 +0800
-+++ m4-1.4.18/build-aux/config.guess	2017-01-02 03:35:23.258982000 +0800
+diff -Naur m4-1.4.17-orig/build-aux/config.guess m4-1.4.17/build-aux/config.guess
+--- m4-1.4.17-orig/build-aux/config.guess	2016-12-30 04:32:31.000000000 +0800
++++ m4-1.4.17/build-aux/config.guess	2017-01-02 03:35:23.258982000 +0800
 @@ -891,6 +891,9 @@
      amd64:CYGWIN*:*:* | x86_64:CYGWIN*:*:*)
  	echo x86_64-unknown-cygwin
@@ -32,9 +32,9 @@ diff -Naur m4-1.4.18-orig/build-aux/config.guess m4-1.4.18/build-aux/config.gues
      p*:CYGWIN*:*)
  	echo powerpcle-unknown-cygwin
  	exit ;;
-diff -Naur m4-1.4.18-orig/build-aux/config.rpath m4-1.4.18/build-aux/config.rpath
---- m4-1.4.18-orig/build-aux/config.rpath	2016-12-31 21:54:40.000000000 +0800
-+++ m4-1.4.18/build-aux/config.rpath	2017-01-02 03:35:23.268971600 +0800
+diff -Naur m4-1.4.17-orig/build-aux/config.rpath m4-1.4.17/build-aux/config.rpath
+--- m4-1.4.17-orig/build-aux/config.rpath	2016-12-31 21:54:40.000000000 +0800
++++ m4-1.4.17/build-aux/config.rpath	2017-01-02 03:35:23.268971600 +0800
 @@ -57,7 +57,7 @@
      aix*)
        wl='-Wl,'
@@ -80,9 +80,9 @@ diff -Naur m4-1.4.18-orig/build-aux/config.rpath m4-1.4.18/build-aux/config.rpat
      shrext=.dll
      library_names_spec='$libname.dll.a $libname.lib'
      ;;
-diff -Naur m4-1.4.18-orig/configure m4-1.4.18/configure
---- m4-1.4.18-orig/configure	2017-01-01 06:36:36.000000000 +0800
-+++ m4-1.4.18/configure	2017-01-02 03:35:23.358999700 +0800
+diff -Naur m4-1.4.17-orig/configure m4-1.4.17/configure
+--- m4-1.4.17-orig/configure	2017-01-01 06:36:36.000000000 +0800
++++ m4-1.4.17/configure	2017-01-02 03:35:23.358999700 +0800
 @@ -7052,7 +7052,7 @@
       else
         case "$host_os" in
@@ -180,9 +180,9 @@ diff -Naur m4-1.4.18-orig/configure m4-1.4.18/configure
              if test "$cross_compiling" = yes; then :
    :
  else
-diff -Naur m4-1.4.18-orig/lib/Makefile.in m4-1.4.18/lib/Makefile.in
---- m4-1.4.18-orig/lib/Makefile.in	2017-01-01 06:25:58.000000000 +0800
-+++ m4-1.4.18/lib/Makefile.in	2017-01-02 03:35:23.414002200 +0800
+diff -Naur m4-1.4.17-orig/lib/Makefile.in m4-1.4.17/lib/Makefile.in
+--- m4-1.4.17-orig/lib/Makefile.in	2017-01-01 06:25:58.000000000 +0800
++++ m4-1.4.17/lib/Makefile.in	2017-01-02 03:35:23.414002200 +0800
 @@ -2323,7 +2323,7 @@
  	  case '$(host_os)' in \
  	    darwin[56]*) \
@@ -192,9 +192,9 @@ diff -Naur m4-1.4.18-orig/lib/Makefile.in m4-1.4.18/lib/Makefile.in
  	      need_charset_alias=false ;; \
  	    *) \
  	      need_charset_alias=true ;; \
-diff -Naur m4-1.4.18-orig/lib/gnulib.mk m4-1.4.18/lib/gnulib.mk
---- m4-1.4.18-orig/lib/gnulib.mk	2017-01-01 05:34:31.000000000 +0800
-+++ m4-1.4.18/lib/gnulib.mk	2017-01-02 03:35:23.384004500 +0800
+diff -Naur m4-1.4.17-orig/lib/gnulib.mk m4-1.4.17/lib/gnulib.mk
+--- m4-1.4.17-orig/lib/gnulib.mk	2017-01-01 05:34:31.000000000 +0800
++++ m4-1.4.17/lib/gnulib.mk	2017-01-02 03:35:23.384004500 +0800
 @@ -824,7 +824,7 @@
  	  case '$(host_os)' in \
  	    darwin[56]*) \
@@ -204,9 +204,9 @@ diff -Naur m4-1.4.18-orig/lib/gnulib.mk m4-1.4.18/lib/gnulib.mk
  	      need_charset_alias=false ;; \
  	    *) \
  	      need_charset_alias=true ;; \
-diff -Naur m4-1.4.18-orig/m4/btowc.m4 m4-1.4.18/m4/btowc.m4
---- m4-1.4.18-orig/m4/btowc.m4	2016-12-31 21:54:42.000000000 +0800
-+++ m4-1.4.18/m4/btowc.m4	2017-01-02 03:35:23.419012100 +0800
+diff -Naur m4-1.4.17-orig/m4/btowc.m4 m4-1.4.17/m4/btowc.m4
+--- m4-1.4.17-orig/m4/btowc.m4	2016-12-31 21:54:42.000000000 +0800
++++ m4-1.4.17/m4/btowc.m4	2017-01-02 03:35:23.419012100 +0800
 @@ -49,7 +49,7 @@
  changequote(,)dnl
             case "$host_os" in
@@ -216,9 +216,9 @@ diff -Naur m4-1.4.18-orig/m4/btowc.m4 m4-1.4.18/m4/btowc.m4
                        # Guess yes otherwise.
               *)       gl_cv_func_btowc_nul="guessing yes" ;;
             esac
-diff -Naur m4-1.4.18-orig/m4/double-slash-root.m4 m4-1.4.18/m4/double-slash-root.m4
---- m4-1.4.18-orig/m4/double-slash-root.m4	2016-12-31 21:54:42.000000000 +0800
-+++ m4-1.4.18/m4/double-slash-root.m4	2017-01-02 03:35:23.424012700 +0800
+diff -Naur m4-1.4.17-orig/m4/double-slash-root.m4 m4-1.4.17/m4/double-slash-root.m4
+--- m4-1.4.17-orig/m4/double-slash-root.m4	2016-12-31 21:54:42.000000000 +0800
++++ m4-1.4.17/m4/double-slash-root.m4	2017-01-02 03:35:23.424012700 +0800
 @@ -16,7 +16,7 @@
          # special semantics and is distinct from /, please report it to
          # <bug-gnulib@gnu.org>.
@@ -228,9 +228,9 @@ diff -Naur m4-1.4.18-orig/m4/double-slash-root.m4 m4-1.4.18/m4/double-slash-root
              gl_cv_double_slash_root=yes ;;
            *)
              # Be optimistic and assume that / and // are the same when we
-diff -Naur m4-1.4.18-orig/m4/dup2.m4 m4-1.4.18/m4/dup2.m4
---- m4-1.4.18-orig/m4/dup2.m4	2016-12-31 21:54:42.000000000 +0800
-+++ m4-1.4.18/m4/dup2.m4	2017-01-02 03:35:23.429014400 +0800
+diff -Naur m4-1.4.17-orig/m4/dup2.m4 m4-1.4.17/m4/dup2.m4
+--- m4-1.4.17-orig/m4/dup2.m4	2016-12-31 21:54:42.000000000 +0800
++++ m4-1.4.17/m4/dup2.m4	2017-01-02 03:35:23.429014400 +0800
 @@ -78,7 +78,7 @@
          [case "$host_os" in
             mingw*) # on this platform, dup2 always returns 0 for success
@@ -240,9 +240,9 @@ diff -Naur m4-1.4.18-orig/m4/dup2.m4 m4-1.4.18/m4/dup2.m4
               gl_cv_func_dup2_works="guessing no" ;;
             aix* | freebsd*)
                     # on AIX 7.1 and FreeBSD 6.1, dup2 (1,toobig) gives EMFILE,
-diff -Naur m4-1.4.18-orig/m4/getcwd.m4 m4-1.4.18/m4/getcwd.m4
---- m4-1.4.18-orig/m4/getcwd.m4	2016-12-31 21:54:42.000000000 +0800
-+++ m4-1.4.18/m4/getcwd.m4	2017-01-02 03:35:23.439015500 +0800
+diff -Naur m4-1.4.17-orig/m4/getcwd.m4 m4-1.4.17/m4/getcwd.m4
+--- m4-1.4.17-orig/m4/getcwd.m4	2016-12-31 21:54:42.000000000 +0800
++++ m4-1.4.17/m4/getcwd.m4	2017-01-02 03:35:23.439015500 +0800
 @@ -51,7 +51,7 @@
                       # Guess yes on glibc systems.
              *-gnu*)  gl_cv_func_getcwd_null="guessing yes";;
@@ -252,9 +252,9 @@ diff -Naur m4-1.4.18-orig/m4/getcwd.m4 m4-1.4.18/m4/getcwd.m4
                       # If we don't know, assume the worst.
              *)       gl_cv_func_getcwd_null="guessing no";;
            esac
-diff -Naur m4-1.4.18-orig/m4/malloc.m4 m4-1.4.18/m4/malloc.m4
---- m4-1.4.18-orig/m4/malloc.m4	2016-12-31 21:54:42.000000000 +0800
-+++ m4-1.4.18/m4/malloc.m4	2017-01-02 03:35:23.444017200 +0800
+diff -Naur m4-1.4.17-orig/m4/malloc.m4 m4-1.4.17/m4/malloc.m4
+--- m4-1.4.17-orig/m4/malloc.m4	2016-12-31 21:54:42.000000000 +0800
++++ m4-1.4.17/m4/malloc.m4	2017-01-02 03:35:23.444017200 +0800
 @@ -33,7 +33,7 @@
         [case "$host_os" in
            # Guess yes on platforms where we know the result.
@@ -264,9 +264,9 @@ diff -Naur m4-1.4.18-orig/m4/malloc.m4 m4-1.4.18/m4/malloc.m4
              ac_cv_func_malloc_0_nonnull=yes ;;
            # If we don't know, assume the worst.
            *) ac_cv_func_malloc_0_nonnull=no ;;
-diff -Naur m4-1.4.18-orig/m4/printf.m4 m4-1.4.18/m4/printf.m4
---- m4-1.4.18-orig/m4/printf.m4	2016-12-31 21:54:42.000000000 +0800
-+++ m4-1.4.18/m4/printf.m4	2017-01-02 03:35:23.454019200 +0800
+diff -Naur m4-1.4.17-orig/m4/printf.m4 m4-1.4.17/m4/printf.m4
+--- m4-1.4.17-orig/m4/printf.m4	2016-12-31 21:54:42.000000000 +0800
++++ m4-1.4.17/m4/printf.m4	2017-01-02 03:35:23.454019200 +0800
 @@ -722,7 +722,7 @@
             openbsd*)        gl_cv_func_printf_directive_ls="guessing no";;
             irix*)           gl_cv_func_printf_directive_ls="guessing no";;
@@ -294,10 +294,10 @@ diff -Naur m4-1.4.18-orig/m4/printf.m4 m4-1.4.18/m4/printf.m4
                                   # Guess yes on Solaris >= 2.6.
             solaris2.[0-5] | solaris2.[0-5].*)
                                   gl_cv_func_vsnprintf_zerosize_c99="guessing no";;
-diff -Naur m4-1.4.18-orig/m4/setlocale.m4 m4-1.4.18/m4/setlocale.m4
---- m4-1.4.18-orig/m4/setlocale.m4	2016-12-31 21:54:42.000000000 +0800
-+++ m4-1.4.18/m4/setlocale.m4	2017-01-02 03:35:23.464021200 +0800
-@@ -14,7 +14,7 @@
+diff -Naur m4-1.4.17-orig/m4/setlocale.m4 m4-1.4.17/m4/setlocale.m4
+--- m4-1.4.17-orig/m4/setlocale.m4	2016-12-31 21:54:42.000000000 +0800
++++ m4-1.4.17/m4/setlocale.m4	2017-01-02 03:35:23.464021200 +0800
+@@ -17,7 +17,7 @@
      mingw*) REPLACE_SETLOCALE=1 ;;
      dnl On Cygwin 1.5.x, setlocale always succeeds but setlocale(LC_CTYPE,NULL)
      dnl is then still "C".
@@ -305,11 +305,11 @@ diff -Naur m4-1.4.18-orig/m4/setlocale.m4 m4-1.4.18/m4/setlocale.m4
 +    cygwin* | msys*)
        case `uname -r` in
          1.5.*) REPLACE_SETLOCALE=1 ;;
-diff -Naur m4-1.4.18-orig/m4/threadlib.m4 m4-1.4.18/m4/threadlib.m4
        esac
---- m4-1.4.18-orig/m4/threadlib.m4	2016-12-31 21:54:42.000000000 +0800
-+++ m4-1.4.18/m4/threadlib.m4	2017-01-02 03:35:23.474022900 +0800
-@@ -68,7 +68,7 @@
+diff -Naur m4-1.4.17-orig/m4/threadlib.m4 m4-1.4.17/m4/threadlib.m4
+--- m4-1.4.17-orig/m4/threadlib.m4	2016-12-31 21:54:42.000000000 +0800
++++ m4-1.4.17/m4/threadlib.m4	2017-01-02 03:35:23.474022900 +0800
+@@ -71,7 +71,7 @@
           dnl bugs that lead to endless loops or crashes. See
           dnl <http://cygwin.com/ml/cygwin/2009-08/msg00283.html>.
           osf*) gl_use_threads=no ;;
@@ -318,9 +318,9 @@ diff -Naur m4-1.4.18-orig/m4/threadlib.m4 m4-1.4.18/m4/threadlib.m4
                 case `uname -r` in
                   1.[0-5].*) gl_use_threads=no ;;
                   *)         gl_use_threads=yes ;;
-diff -Naur m4-1.4.18-orig/m4/wctob.m4 m4-1.4.18/m4/wctob.m4
---- m4-1.4.18-orig/m4/wctob.m4	2016-12-31 21:54:42.000000000 +0800
-+++ m4-1.4.18/m4/wctob.m4	2017-01-02 03:35:23.484024300 +0800
+diff -Naur m4-1.4.17-orig/m4/wctob.m4 m4-1.4.17/m4/wctob.m4
+--- m4-1.4.17-orig/m4/wctob.m4	2016-12-31 21:54:42.000000000 +0800
++++ m4-1.4.17/m4/wctob.m4	2017-01-02 03:35:23.484024300 +0800
 @@ -29,14 +29,14 @@
  changequote(,)dnl
          case "$host_os" in

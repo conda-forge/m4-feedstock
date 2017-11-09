@@ -5,13 +5,14 @@ package:
   version: {{ version }}
 
 source:
-  fn: m4-{{ version }}.tar.gz  # [not win]
-  url: http://ftp.gnu.org/gnu/m4/m4-{{ version }}.tar.gz  # [not win]
-  sha256: 3ce725133ee552b8b4baca7837fb772940b25e81b2a9dc92537aeaf733538c9e  # [not win]
-  fn: m4-{{ version }}.tar.xz  # [win]
-  url: http://mirrors.kernel.org/sourceware/cygwin/x86_64/release/m4/m4-{{ version }}-2.tar.xz  # [win]
-  sha256: 016f2a5f79f04deb8d3f1b47e28e01659c3c1f8611e40db9d8f312617f34b2ff  # [win]
-  
+  fn: m4-{{ version }}.tar.gz  
+  url: http://ftp.gnu.org/gnu/m4/m4-{{ version }}.tar.gz  
+  sha256: 3ce725133ee552b8b4baca7837fb772940b25e81b2a9dc92537aeaf733538c9e  
+  #fn: m4-{{ version }}.tar.xz  # [win]
+  #url: http://mirrors.kernel.org/sourceware/cygwin/x86_64/release/m4/m4-{{ version }}-2.tar.xz  # [win]
+  #sha256: 016f2a5f79f04deb8d3f1b47e28e01659c3c1f8611e40db9d8f312617f34b2ff  # [win]
+  patches:
+    - 001-msys2.patch
 
 build:
   number: 1
@@ -35,8 +36,8 @@ test:
 about:
   home: http://www.gnu.org/software/m4/
   license: GPL-3.0
-  license_file: COPYING  # [not win]
-  license_file: share\doc\m4\COPYING  # [win]
+  license_file: COPYING
+  #license_file: share\doc\m4\COPYING  # [win]
   summary: 'Implementation of the traditional Unix macro processor.'
 
 extra:

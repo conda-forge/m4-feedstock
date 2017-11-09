@@ -1,8 +1,16 @@
 @echo off
 setlocal EnableDelayedExpansion
 
-robocopy . %LIBRARY_PREFIX% /s /e 
-call :REPORT_ERRORLEVEL
+bash configure --prefix %LIBRARY_PREFIX%
+if errorlevel exit 1
+
+make 
+if errorlevel exit 1
+
+
+
+REM robocopy . %LIBRARY_PREFIX% /s /e 
+REM call :REPORT_ERRORLEVEL
 goto :EOF
 
 :REPORT_ERRORLEVEL
