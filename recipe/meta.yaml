@@ -18,9 +18,12 @@ build:
 
 requirements:
   build:
+    - posix  # [win]
     - m2w64-toolchain  # [win]
   run:
+    - posix  # [win]
     - m2w64-gcc-libs   # [win]
+    - m2-msys2-runtime  # [win]
   
 test:
   commands:
@@ -32,7 +35,8 @@ test:
 about:
   home: http://www.gnu.org/software/m4/
   license: GPL-3.0
-  license_file: COPYING
+  license_file: COPYING  # [not win]
+  license_file: share\doc\m4\COPYING  # [win]
   summary: 'Implementation of the traditional Unix macro processor.'
 
 extra:
