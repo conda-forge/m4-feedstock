@@ -7,9 +7,6 @@ package:
 source:
   url: http://ftp.gnu.org/gnu/m4/m4-{{ version }}.tar.gz
   sha256: 3be4a26d825ffdfda52a56fc43246456989a3630093cced3fbddf4771ee58a70
-  patches:
-    # From Homebrew: https://raw.githubusercontent.com/macports/macports-ports/edf0ee1e2cf/devel/m4/files/secure_snprintf.patch
-    - secure_snprintf.patch
 
 build:
   number: 0
