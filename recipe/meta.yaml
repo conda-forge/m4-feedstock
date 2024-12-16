@@ -12,13 +12,23 @@ source:
     - secure_snprintf.patch
 
 build:
+{% if bootstrapping == 'yes' %}
+  # Please increment by two
+  number: 0
+  string: h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}_bootstrapping
+{% else %}
+  # Keep above the number of the _bootstrapping package
   number: 1001
+  string: h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}
+{% endif %}
   skip: True  # [win]
 
 requirements:
   build:
     - {{ compiler('c') }}
+{% if bootstrapping != 'yes' %}
     - libtool
+{% endif %}
     - make
 
 test:
