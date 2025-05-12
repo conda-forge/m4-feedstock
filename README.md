@@ -203,4 +203,5 @@ Feedstock Maintainers
 
 * [@mingwandroid](https://github.com/mingwandroid/)
 * [@ocefpaf](https://github.com/ocefpaf/)
+* [@xhochy](https://github.com/xhochy/)
 
