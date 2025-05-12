@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/m4-feedstock/bl
 
 Home: http://www.gnu.org/software/m4/
 
-Package license: GPL-3.0
+Package license: GPL-3.0-or-later
 
 Summary: Implementation of the traditional Unix macro processor.
 
