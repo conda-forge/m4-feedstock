@@ -1,4 +1,4 @@
-{% set version = "1.4.18" %}
+{% set version = "1.4.20" %}
 
 package:
   name: m4
@@ -6,18 +6,16 @@ package:
 
 source:
   url: http://ftp.gnu.org/gnu/m4/m4-{{ version }}.tar.gz
-  sha256: ab2633921a5cd38e48797bf5521ad259bdc4b979078034a3b790d7fec5493fab
-  patches:
-    # From Homebrew: https://raw.githubusercontent.com/macports/macports-ports/edf0ee1e2cf/devel/m4/files/secure_snprintf.patch
-    - secure_snprintf.patch
+  sha256: 6ac4fc31ce440debe63987c2ebbf9d7b6634e67a7c3279257dc7361de8bdb3ef
 
 build:
-  number: 1001
-  skip: True  # [win]
+  number: 0
+  skip: true  # [win]
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - libtool
     - make
 
@@ -25,12 +23,10 @@ test:
   commands:
     - m4 --help
     - m4 --version
-    - conda inspect linkages -p $PREFIX m4  # [not win]
-    - conda inspect objects -p $PREFIX m4  # [osx]
 
 about:
   home: http://www.gnu.org/software/m4/
-  license: GPL-3.0
+  license: GPL-3.0-or-later
   license_file: COPYING
   summary: 'Implementation of the traditional Unix macro processor.'
 
@@ -47,3 +43,4 @@ extra:
   recipe-maintainers:
     - ocefpaf
     - mingwandroid
+    - xhochy
