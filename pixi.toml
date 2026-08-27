@@ -5,7 +5,7 @@
 
 [workspace]
 name = "m4-feedstock"
-version = "3.54.2"  # conda-smithy version used to generate this file
+version = "2026.6.14"  # conda-smithy version used to generate this file
 description = "Pixi configuration for conda-forge/m4-feedstock"
 authors = ["@conda-forge/m4"]
 channels = ["conda-forge"]
@@ -13,7 +13,7 @@ platforms = ["linux-64", "osx-64", "win-64"]
 requires-pixi = ">=0.59.0"
 
 [dependencies]
-conda-build = ">=24.1"
+conda-build = ">=26.3"
 conda-forge-ci-setup = "4.*"
 python = "3.12.*"
 
@@ -53,6 +53,15 @@ description = "Debug m4-feedstock with variant linux_ppc64le_ directly (without 
 [tasks."inspect-linux_ppc64le_"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_ppc64le_.yaml"
 description = "List contents of m4-feedstock packages built for variant linux_ppc64le_"
+[tasks."build-linux_riscv64_"]
+cmd = "conda-build build recipe -m .ci_support/linux_riscv64_.yaml --suppress-variables --clobber-file .ci_support/clobber_linux_riscv64_.yaml"
+description = "Build m4-feedstock with variant linux_riscv64_ directly (without setup scripts)"
+[tasks."debug-linux_riscv64_"]
+cmd = "conda-build debug recipe -m .ci_support/linux_riscv64_.yaml"
+description = "Debug m4-feedstock with variant linux_riscv64_ directly (without setup scripts)"
+[tasks."inspect-linux_riscv64_"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_riscv64_.yaml"
+description = "List contents of m4-feedstock packages built for variant linux_riscv64_"
 [tasks."build-osx_64_"]
 cmd = "conda-build build recipe -m .ci_support/osx_64_.yaml --suppress-variables --clobber-file .ci_support/clobber_osx_64_.yaml"
 description = "Build m4-feedstock with variant osx_64_ directly (without setup scripts)"
