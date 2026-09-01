@@ -3,22 +3,21 @@ About m4-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/m4-feedstock/blob/main/LICENSE.txt)
 
-Home: http://www.gnu.org/software/m4/
+Home: https://www.gnu.org/software/m4/
 
 Package license: GPL-3.0-or-later
 
 Summary: Implementation of the traditional Unix macro processor.
 
-Development: http://git.savannah.gnu.org/gitweb/?p=m4.git
+Development: https://git.savannah.gnu.org/gitweb/?p=m4.git
 
-Documentation: http://www.gnu.org/software/m4/manual/index.html
+Documentation: https://www.gnu.org/software/m4/manual/index.html
 
 GNU M4 is an implementation of the traditional Unix macro processor. It is
 mostly SVR4 compatible although it has some extensions (for example,
 handling more than 9 positional parameters to macros). GNU M4 also has
 built-in functions for including files, running shell commands, doing
 arithmetic, etc.
-
 
 Current build status
 ====================
